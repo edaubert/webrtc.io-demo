@@ -1,9 +1,9 @@
 <html>
   <head>
     <title>Example webrtc.io</title>
-    <link type="text/css" href="/style.css" rel="stylesheet"></link>
+    <link type="text/css" href="style.css" rel="stylesheet"></link>
 
-    <script src="/webrtc.io.js"></script>
+    <script src="webrtc.io.js"></script>
   </head>
   <body onload="init()">
     <div id="videos">
@@ -167,6 +167,7 @@
         var room = window.location.hash.slice(1);
 
         //When using localhost
+		// TODO must be fix according to the server address
         rtc.connect("ws://localhost:8000/", room);
 
         rtc.on('add remote stream', function(stream, socketId) {
